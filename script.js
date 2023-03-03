@@ -39,10 +39,11 @@ function addBookToLibrary() {
     const bookPages = document.createElement('p');
     const readBtn = document.createElement('button');
     const removeBtn = document.createElement('button');
+    readBtn.setAttribute('id', 'read');
     bookTitle.textContent = `Title: ${myLibrary[i].title}`;
     bookAuthor.textContent = `Author: ${myLibrary[i].author}`;
     bookPages.textContent = `Pages: ${myLibrary[i].pages}`;
-    readBtn.textContent = 'Read';
+    readBtn.textContent = 'Is it read already?';
     removeBtn.textContent = 'Remove from the library';
     card.appendChild(bookTitle);
     card.appendChild(bookAuthor);
@@ -51,15 +52,17 @@ function addBookToLibrary() {
     card.appendChild(removeBtn);
     library.appendChild(card);
 
-readBtn.addEventListener('click', () => {
-    if(readBtn.textContent = 'Read') {
-        card.style.backgroundColor = 'green';
-        readBtn.textContent = 'Not Read';
-    } else if(readBtn.textContent = 'Not Read') {
-        card.style.backgroundColor = 'red';
-        readBtn.textContent = 'Read';
-    }
-})
+    readBtn.addEventListener('click', () => {
+        if(!readBtn.classList.contains('read')) {
+            readBtn.classList.add('read');
+            readBtn.style.backgroundColor = 'green';
+            readBtn.textContent = 'Read';
+        } else if(readBtn.classList.contains('read')) {
+            readBtn.classList.remove('read');
+            readBtn.style.backgroundColor = 'red';
+            readBtn.textContent = 'Not read';
+        }
+    })
 
 removeBtn.addEventListener('click', () => {
     library.removeChild(card);
