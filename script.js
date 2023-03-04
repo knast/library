@@ -40,6 +40,7 @@ function addBookToLibrary() {
     const readBtn = document.createElement('button');
     const removeBtn = document.createElement('button');
     readBtn.setAttribute('id', 'read');
+    removeBtn.setAttribute('id', 'remove');
     bookTitle.textContent = `Title: ${myLibrary[i].title}`;
     bookAuthor.textContent = `Author: ${myLibrary[i].author}`;
     bookPages.textContent = `Pages: ${myLibrary[i].pages}`;
@@ -55,11 +56,13 @@ function addBookToLibrary() {
     readBtn.addEventListener('click', () => {
         if(!readBtn.classList.contains('read')) {
             readBtn.classList.add('read');
-            readBtn.style.backgroundColor = 'green';
+            readBtn.style.backgroundColor = '#65a30d';
+            readBtn.style.color = '#292524';
             readBtn.textContent = 'Read';
         } else if(readBtn.classList.contains('read')) {
             readBtn.classList.remove('read');
-            readBtn.style.backgroundColor = 'red';
+            readBtn.style.backgroundColor = '#dc2626';
+            readBtn.style.color = '#292524';
             readBtn.textContent = 'Not read';
         }
     })
