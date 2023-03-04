@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Chakra+Petch:wght@500&family=Kanit:wght@200&family=Manrope&family=Roboto:wght@300&family=Syncopate:wght@700&family=Tilt+Neon&family=Unbounded:wght@600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +9,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-color:#60a5fa;
+    font-family:'Tilt Neon', sans-serif;
 }
 
 
@@ -14,7 +17,7 @@ header {
     height:80px;
     display:flex;
     align-items:center;
-    background-color:#475569;
+    background-color:#1e3a8a;
     color:white;
 
 }
@@ -43,7 +46,9 @@ input {
 .book-info {
     width:20%;
     margin:40px auto;
-    box-shadow: 2px 2px 2px 2px lightgray;
+    box-shadow: 2px 2px 2px 2px #3b82f6;
+    border-radius:7px;
+    border:solid 1px #3b82f6;
     padding:15px;
     position:relative;
 }
@@ -73,14 +78,21 @@ input {
 .add-book {
 
     margin-top:40px;
-    border: 1px solid black;
-    background-color:#334155;
-    color:#e2e8f0;
-    font-size:15px;
-    width: 90px;
-    height:30px;
+    border: 1px solid #38bdf8;
+    background-color:#93c5fd;
+    color:#525252;
+    font-size:18px;
+    width: 110px;
+    height:40px;
     border-radius:8px;
+    font-weight:bold;
 
+}
+
+.add-book:hover {
+    background-color:#1e40af;
+    color:#dbeafe;
+    transition: 0.5s;
 }
 
 .card {
